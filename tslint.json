@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-eslint-rules",
+    "tslint-config-airbnb-base",
+    "tslint-react-recommended",
+    "tslint-config-prettier",
+    "tslint-plugin-prettier",
+    "tslint-plugin-jest"
+  ],
+  "rules": {
+    "import-name": false,
+    "export-name": false,
+    "no-empty": false,
+    "quotemark": [true, "single", "jsx-double"],
+    "object-literal-sort-keys": false,
+    "no-implicit-dependencies": [false],
+    "no-submodule-imports": false,
+    "prettier": [
+      true,
+      {
+        "semi": true,
+        "singleQuote": true
+      }
+    ]
+  }
+}

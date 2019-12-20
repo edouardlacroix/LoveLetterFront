@@ -1,0 +1,46 @@
+{
+  "name": "LoveLetter",
+  "version": "1.0.0",
+  "main": "public/index.html",
+  "repository": "https://github.com/edouardlacroix/LoveLetterFront",
+  "author": "edouard.lacroix1@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development parcel ./public/index.html -d build --open --no-cache --port 5000 ",
+    "build": "cross-env NODE_ENV=production parcel build ./public/index.html -d build --no-cache --no-minify"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.23.7",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "@types/node": "^12.12.21",
+    "axios": "^0.18.0",
+    "cross-env": "^5.2.1",
+    "parcel": "^1.12.3",
+    "path": "^0.12.7",
+    "react": "^16.8.0",
+    "react-dom": "^16.9.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-router-redux": "^4.0.8",
+    "redux": "^4.0.0",
+    "redux-req-middleware": "^1.0.4",
+    "socket.io-client": "^2.3.0",
+    "tslint": "^5.20.0"
+  },
+  "root": [
+    ".project/src"
+  ],
+  "alias": {
+    "app": "./src/app",
+    "components": "./src/app/components",
+    "containers": "./src/app/containers",
+    "base": "./src/base",
+    "reducers": "./src/base/reducers",
+    "services": "./src/base/services",
+    "shared": "./src/base/shared",
+    "store": "./src/base/store"
+  }
+}

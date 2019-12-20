@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "allowJs": false,
+    "sourceMap": true,
+    "module": "commonjs",
+    "outDir": "build",
+    "esModuleInterop": true,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "src",
+    "paths": {
+      "app/*": ["app/*"],
+      "containers/*": ["app/containers/*"],
+      "components/*": ["app/components/*"],
+      "base/*": ["base/*"],
+      "middleware/*": ["base/middleware/*"],
+      "reducers/*": ["base/reducers/*"],
+      "services/*": ["base/services/*"],
+      "shared/*": ["base/shared/*"],
+      "store/*": ["base/store/*"]
+    }
+  },
+  "include": ["./src/**/*", "./module.d.ts"],
+  "exclude": ["node_modules"]
+}

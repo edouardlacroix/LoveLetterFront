@@ -1,0 +1,17 @@
+@import '../../../base/shared/css/base.scss';
+
+.lobby-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-image: $backgroundImage;
+  background-size: cover;
+}
+
+.title {
+  font-family: $cursiveFont;
+  font-size: 120px;
+  color: white;
+}

@@ -1,8 +1,14 @@
 @import '../../../base/shared/css/base.scss';
 
 .playerList-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: green;
+  align-items: flex-start;
+  background-color: rgba(128, 128, 128, 0.452);
+  width: 200px;
+  color: white;
 }

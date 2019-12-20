@@ -10,11 +10,15 @@ class PlayerList extends Component {
     };
   }
 
-  componentDidMount() {
+  playersDataListener() {
     SocketConnection.on('SEND_ALL_PLAYERS_DATA', value => {
       this.setState({ playersData: value });
       console.log(this.state.playersData);
     });
+  }
+
+  componentDidMount() {
+    this.playersDataListener();
   }
 
   render() {
@@ -22,7 +26,10 @@ class PlayerList extends Component {
       <div className={'playerList-wrapper'}>
         <p>Player List</p>
         {this.state.playersData.map(item => (
-          <p>{JSON.stringify(item)}</p>
+          <div>
+            <h3>{item.name}</h3>
+            <p>Points : {item.points}</p>
+          </div>
         ))}
       </div>
     );

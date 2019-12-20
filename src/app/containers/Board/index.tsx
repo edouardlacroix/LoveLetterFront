@@ -11,7 +11,7 @@ class Board extends Component {
   render() {
     return (
       <div className={'board-wrapper'}>
-        <h1>Game Board</h1>
+        <h1>Game Board </h1>
         <PlayerList />
       </div>
     );

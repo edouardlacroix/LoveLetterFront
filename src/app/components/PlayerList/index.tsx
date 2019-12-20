@@ -24,7 +24,7 @@ class PlayerList extends Component {
   render() {
     return (
       <div className={'playerList-wrapper'}>
-        <p>Player List</p>
+        <h2>Player List</h2>
         {this.state.playersData.map(item => (
           <div>
             <h3>{item.name}</h3>

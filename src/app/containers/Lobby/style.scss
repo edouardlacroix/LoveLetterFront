@@ -6,7 +6,7 @@
   align-items: center;
   height: 100%;
   width: 100%;
-  background-image: $backgroundImage;
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6ff2ccfb-d302-4348-87bc-8b9568748e63/d88fysk-4695e236-8387-4309-94e7-060c5e7b8a36.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzZmZjJjY2ZiLWQzMDItNDM0OC04N2JjLThiOTU2ODc0OGU2M1wvZDg4Znlzay00Njk1ZTIzNi04Mzg3LTQzMDktOTRlNy0wNjBjNWU3YjhhMzYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.WRBkbxfmTho52EBbHum9PoaYa65sjLiDnZ3O30Me6_Y');
   background-size: cover;
 }
 
@@ -14,4 +14,25 @@
   font-family: $cursiveFont;
   font-size: 120px;
   color: white;
+}
+
+.lobby-wrapper p {
+  font-size: 25px;
+  color: white;
+}
+
+.lobby-wrapper input {
+  width: 300px;
+  height: 50px;
+  padding-left: 5px;
+  border-radius: $borderRadius;
+}
+
+.lobby-wrapper button {
+  width: 200px;
+  height: 50px;
+  margin-top: 10px;
+  border: none;
+  border-radius: $borderRadius;
+  cursor: pointer;
 }

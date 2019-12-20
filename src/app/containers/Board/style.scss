@@ -1,6 +1,6 @@
 @import '../../../base/shared/css/base.scss';
 
-.boardWrapper-wrapper {
+.board-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,4 +8,10 @@
   width: 100%;
   background-image: $backgroundImage;
   background-size: cover;
+}
+
+.board-wrapper h1 {
+  font-size: 100px;
+  font-family: $cursiveFont;
+  color: white;
 }

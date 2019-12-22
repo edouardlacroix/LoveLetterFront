@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PlayerList from 'components/PlayerList';
+import Card from 'components/Card'
 import store from 'base/store';
 import './style.scss';
 
@@ -13,6 +14,7 @@ class Board extends Component {
       <div className={'board-wrapper'}>
         <h1>Game Board </h1>
         <PlayerList />
+        <Card />
       </div>
     );
   }

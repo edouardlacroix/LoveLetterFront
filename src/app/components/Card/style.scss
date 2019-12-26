@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
   margin-left:20px;
+  width:256px;
 }
 
 .card-wrapper img {
@@ -15,6 +16,7 @@
   cursor: pointer;
   transition: 0.2s;
   height: 100%;
+  width:100%;
 }
 
 .card-wrapper img:hover {

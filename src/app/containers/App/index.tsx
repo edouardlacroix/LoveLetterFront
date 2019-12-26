@@ -3,7 +3,7 @@ import { Router, Route, Link } from 'react-router-dom';
 import Lobby from 'containers/Lobby';
 import Board from 'containers/Board';
 import history from 'shared/history';
-import './style.css';
+import './style.scss';
 
 class App extends Component {
   constructor(props) {

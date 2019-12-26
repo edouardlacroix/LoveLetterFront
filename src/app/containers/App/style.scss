@@ -1,3 +1,5 @@
+@import '../../../base/shared/css/base.scss';
+
 html,
 body {
   position: absolute;
@@ -8,6 +10,7 @@ body {
   padding: 0px;
   margin: 0px;
   font-family: 'Roboto', Verdana, sans-serif !important;
+  overflow: hidden;
 }
 
 .no-padding {
@@ -26,21 +29,21 @@ body {
 }
 
  /* width */
- html::-webkit-scrollbar {
-  width: 10px;
+ ::-webkit-scrollbar {
+  width: 5px;
 }
 
 /* Track */
-html::-webkit-scrollbar-track {
-  background: #f1f1f1;
+::-webkit-scrollbar-track {
+  background: $backgroundTransparentWhite;
 }
 
 /* Handle */
-html::-webkit-scrollbar-thumb {
-  background: #888;
+::-webkit-scrollbar-thumb {
+  background: white;
 }
 
 /* Handle on hover */
-html::-webkit-scrollbar-thumb:hover {
-  background: #555;
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(179, 178, 178);
 } 

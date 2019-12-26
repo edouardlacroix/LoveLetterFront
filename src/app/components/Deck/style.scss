@@ -1,0 +1,18 @@
+@import '../../../base/shared/css/base.scss';
+
+.deck-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:0px;
+  top:1%;
+  right:21%;
+}
+
+.deck-wrapper .card-wrapper{
+width: 150px;
+}
+
+

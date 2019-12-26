@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Card from 'components/Card'
+import Card, { cardSide } from 'components/Card'
+
 import './style.scss';
 
 class PlayedCardDisplay extends Component {
@@ -20,7 +21,7 @@ class PlayedCardDisplay extends Component {
           {this.cardList.map((item, id) => {
             return (
               <div style={{ zIndex: 10 + id + 1, top: 10 + id * 70 + 'px' }} className={'card-alone'}>
-                <Card />
+                <Card side={cardSide.front} />
               </div>
             )
           })

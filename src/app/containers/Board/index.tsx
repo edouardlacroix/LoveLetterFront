@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PlayerList from 'components/PlayerList';
-import Card from 'components/Card'
+import Card, { cardSide } from 'components/Card'
 import PlayedCardDisplay from 'components/PlayedCardDisplay'
+import Deck from 'components/Deck'
 import store from 'base/store';
 import './style.scss';
 
@@ -13,11 +14,15 @@ class Board extends Component {
   render() {
     return (
       <div className={'board-wrapper'}>
-        <h1>Game Board </h1>
+        {/* <h1>Game Board </h1> */}
+        <Deck />
         <PlayerList />
         <div className={'card-display'}>
-          <Card />
-          <Card />
+          <Card side={cardSide.front} />
+          <Card side={cardSide.front} />
+          <Card side={cardSide.front} />
+
+          {/* <Card side={cardSide.front} /> */}
         </div>
         <PlayedCardDisplay />
 

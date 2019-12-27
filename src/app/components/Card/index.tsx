@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import priestTEMP from 'app/assets/priestTEMP.png'
-import cardBack from 'app/assets/card_Back.jpg'
+import cardBack from 'app/assets/card_back.jpg'
 import './style.scss';
 
 

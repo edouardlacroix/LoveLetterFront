@@ -12,11 +12,18 @@ class PlayerList extends Component {
     // SocketConnection.emit('UPDATE_GAME_DATA_REFRESH');
   }
 
+  localPlayer = this.props.gameData.filter(item => item.id === SocketConnection.id)[0]
+  otherPlayers = this.props.gameData.filter(item => item.id != SocketConnection.id)
   render() {
+    console.log(this.localPlayer)
     return (
       <div className={'playerList-wrapper'}>
         <h2>Player List</h2>
-        {this.props.gameData.map(item => (
+        <div className={'localPlayer'}>
+          <h3><a>★</a>{this.localPlayer.name}</h3>
+          <p>Points : {this.localPlayer.points}</p>
+        </div>
+        {this.otherPlayers.map(item => (
           <div>
             <h3>{item.name}</h3>
             <p>Points : {item.points}</p>

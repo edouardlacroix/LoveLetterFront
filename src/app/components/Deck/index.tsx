@@ -18,6 +18,7 @@ class Deck extends Component {
       <div className={'deck-wrapper'} onClick={() => this.props.onClick()}  >
         <div className={'card-image'}>
           <Card side={cardSide.back} />
+          <p>27</p>
         </div>
       </div>
     );

@@ -3,11 +3,26 @@ import { Router, Route, Link } from 'react-router-dom';
 import Lobby from 'containers/Lobby';
 import Board from 'containers/Board';
 import history from 'shared/history';
+import SocketConnection from 'shared/SocketConnection';
+import store from 'store/'
+import { setNewGameData } from './redux/actions'
+
 import './style.scss';
 
 class App extends Component {
   constructor(props) {
     super(props);
+  }
+
+
+  componentDidMount() {
+
+    window.addEventListener("beforeunload", (ev) => {
+      SocketConnection.emit('DISCONNECT_SELF')
+    });
+    SocketConnection.on('UPDATE_GAME_DATA', data => {
+      store.dispatch(setNewGameData(data))
+    });
   }
 
   render() {

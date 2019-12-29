@@ -1,31 +1,22 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import SocketConnection from 'shared/SocketConnection';
+
 import './style.scss';
 
 class PlayerList extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      playersData: []
-    };
   }
-
-  playersDataListener() {
-    SocketConnection.on('SEND_ALL_PLAYERS_DATA', value => {
-      this.setState({ playersData: value });
-      console.log(this.state.playersData);
-    });
-  }
-
   componentDidMount() {
-    this.playersDataListener();
+    // SocketConnection.emit('UPDATE_GAME_DATA_REFRESH');
   }
 
   render() {
     return (
       <div className={'playerList-wrapper'}>
         <h2>Player List</h2>
-        {this.state.playersData.map(item => (
+        {this.props.gameData.map(item => (
           <div>
             <h3>{item.name}</h3>
             <p>Points : {item.points}</p>
@@ -36,4 +27,6 @@ class PlayerList extends Component {
   }
 }
 
-export default PlayerList;
+export default connect(state => ({
+  gameData: state.AppReducer.gameData
+}))(PlayerList);

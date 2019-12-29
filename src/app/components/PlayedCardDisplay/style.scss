@@ -28,6 +28,8 @@ text-align: center;
 
 .playedCardDisplay-wrapper .card-list{
   position: relative;
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 100%;
   overflow: auto;

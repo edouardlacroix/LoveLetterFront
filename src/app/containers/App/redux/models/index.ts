@@ -1,11 +1,7 @@
 import { Record } from 'immutable';
 
 const AppModel = Record({
-  login: '',
-  token: null,
-  loginLabel: '',
-  accountType: '',
-  manufacturers: null
+  gameData: null
 });
 
 function setInitialState(initialState) {

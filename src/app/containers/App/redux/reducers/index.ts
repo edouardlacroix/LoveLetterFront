@@ -3,15 +3,13 @@ import ActionTypes from '../actionTypes';
 import { createReducer } from 'base/shared/CreateReducer';
 // import { toastify, toastType } from 'services/ToastingService';
 
-const manufacturersRequest = state => state;
-
-const manufacturersSuccess = (state, action) => {
+const setNewGameData = (state, action) => {
   const data = action.payload;
-  return state.set('manufacturers', data);
-};
+  return state.set('gameData', data);
+}
 
 const actionHandlers = {
-  [ActionTypes.GET_MANUFACTURERS_SUCCESS]: manufacturersSuccess
+  [ActionTypes.SET_NEW_GAME_DATA]: setNewGameData
 };
 
 export default createReducer(actionHandlers, new AppModel());

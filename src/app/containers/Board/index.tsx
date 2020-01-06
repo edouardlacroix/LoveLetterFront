@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PlayerList from 'components/PlayerList';
-import Card, { cardSide } from 'components/Card';
+import Card from 'components/Card';
 import PlayedCardDisplay from 'components/PlayedCardDisplay';
 import Deck from 'components/Deck';
 import PlayerChoosingPopUp from 'components/PlayerChoosingPopUp';
@@ -22,9 +22,9 @@ class Board extends Component {
         <PlayerChoosingPopUp />
         <CardChoosingPopUp />
         <div className={'card-display'}>
-          <Card side={cardSide.front} />
-          <Card side={cardSide.front} />
-          <Card side={cardSide.front} />
+          <Card id={0} />
+          <Card id={1} />
+          <Card id={2} />
         </div>
         <PlayedCardDisplay />
       </div>

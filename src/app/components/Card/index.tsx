@@ -1,33 +1,30 @@
 import React, { Component } from 'react';
-import priestTEMP from 'app/assets/priestTEMP.png'
-import cardBack from 'app/assets/card_back.jpg'
+import priestTEMP from 'app/assets/priestTEMP.png';
+import cardBack from 'app/assets/card_back.jpg';
 import './style.scss';
 
-
-export enum cardSide { front, back }
-
-interface IProps {
-  side: cardSide
+export enum cardSide {
+  front,
+  back
 }
 
+interface IProps {
+  side: cardSide;
+}
 
 class Card extends Component {
   constructor(props) {
     super(props);
-
   }
-
-
-
 
   render() {
     return (
-      <div className={'card-wrapper'} onClick={() => this.props.onClick()}  >
-        {this.props.side === cardSide.front ?
-          <img src={priestTEMP} /> :
+      <div className={'card-wrapper'} onClick={() => this.props.onClick()}>
+        {this.props.side === cardSide.front ? (
+          <img src={priestTEMP} />
+        ) : (
           <img src={cardBack} />
-
-        }
+        )}
       </div>
     );
   }

@@ -4,6 +4,7 @@ import Card, { cardSide } from 'components/Card';
 import PlayedCardDisplay from 'components/PlayedCardDisplay';
 import Deck from 'components/Deck';
 import PlayerChoosingPopUp from 'components/PlayerChoosingPopUp';
+import CardChoosingPopUp from 'components/CardChoosingPopUp';
 import store from 'base/store';
 import './style.scss';
 
@@ -19,6 +20,7 @@ class Board extends Component {
         <Deck />
         <PlayerList />
         <PlayerChoosingPopUp />
+        <CardChoosingPopUp />
         <div className={'card-display'}>
           <Card side={cardSide.front} />
           <Card side={cardSide.front} />

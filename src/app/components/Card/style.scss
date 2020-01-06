@@ -6,22 +6,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left:20px;
-  width:256px;
+  margin-left: 20px;
+  width: 256px;
+  width: auto;
 }
 
 .card-wrapper img {
   border-radius: 10px;
-  filter:drop-shadow(10px 10px 10px black);
+  filter: drop-shadow(10px 10px 10px black);
   cursor: pointer;
   transition: 0.2s;
   height: 100%;
-  width:100%;
+  width: 100%;
 }
 
 .card-wrapper img:hover {
   transform: scale(1.1);
-  filter:drop-shadow(5px 5px 10px black);
+  filter: drop-shadow(5px 5px 10px black);
   transition: 0.2s;
 }
-

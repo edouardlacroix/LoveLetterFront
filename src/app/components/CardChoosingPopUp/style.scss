@@ -1,0 +1,27 @@
+@import '../../../base/shared/css/base.scss';
+
+.cardChoosingPopUp-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $backgroundTransparentWhite !important;
+  z-index: 11;
+}
+
+.cardChoosingPopUp-wrapper h1 {
+  font-size: 50px !important;
+}
+
+.cardChoosingPopUp-wrapper .card-row {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: auto;
+  margin-bottom: 10px;
+}

@@ -5,7 +5,9 @@ import PlayedCardDisplay from 'components/PlayedCardDisplay';
 import Deck from 'components/Deck';
 import PlayerChoosingPopUp from 'components/PlayerChoosingPopUp';
 import CardChoosingPopUp from 'components/CardChoosingPopUp';
-import store from 'base/store';
+import SocketConnection from 'shared/SocketConnection';
+import history from 'history';
+import { connect } from 'react-redux';
 import './style.scss';
 
 class Board extends Component {
@@ -16,13 +18,15 @@ class Board extends Component {
   render() {
     return (
       <div className={'board-wrapper'}>
-        {/* <h1>Game Board </h1> */}
         <Deck />
         <PlayerList />
         <PlayerChoosingPopUp />
         <CardChoosingPopUp />
         <div className={'card-display'}>
-          <Card id={0} />
+          <Card
+            id={0}
+            onClick={() => SocketConnection.emit('PLAY_CARD', { id: 0 })}
+          />
           <Card id={1} />
           <Card id={2} />
         </div>
@@ -32,4 +36,6 @@ class Board extends Component {
   }
 }
 
-export default Board;
+export default connect(state => ({
+  gameData: state.AppReducer.gameData
+}))(Board);

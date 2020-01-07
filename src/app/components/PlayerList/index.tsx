@@ -8,17 +8,16 @@ class PlayerList extends Component {
   constructor(props) {
     super(props);
   }
-  componentDidMount() {
-    // SocketConnection.emit('UPDATE_GAME_DATA_REFRESH');
-  }
 
   render() {
     const localPlayer = this.props.gameData.filter(
       item => item.id === SocketConnection.id
     )[0];
+
     const otherPlayers = this.props.gameData.filter(
       item => item.id != SocketConnection.id
     );
+
     console.log(localPlayer);
     return (
       <div className={'playerList-wrapper'}>

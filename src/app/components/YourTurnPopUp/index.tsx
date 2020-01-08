@@ -22,7 +22,6 @@ class YourTurnPopUp extends Component {
   render() {
     return this.state.displayed ? (
       <div className={'yourTurn-wrapper'}>
-        {/* <h1>Your Turn</h1> */}
         <img src={yourTurnImg} />
       </div>
     ) : null;

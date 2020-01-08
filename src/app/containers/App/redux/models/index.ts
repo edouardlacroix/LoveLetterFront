@@ -1,7 +1,8 @@
 import { Record } from 'immutable';
 
 const AppModel = Record({
-  gameData: null
+  gameData: null,
+  localPlayerData: null
 });
 
 function setInitialState(initialState) {

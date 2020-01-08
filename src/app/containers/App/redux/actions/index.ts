@@ -5,3 +5,7 @@ export const setNewGameData = data => ({
   payload: data
 });
 
+export const setLocalPlayerData = data => ({
+  type: ActionTypes.SET_LOCAL_PLAYER_DATA,
+  payload: data
+});

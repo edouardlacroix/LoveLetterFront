@@ -1,3 +1,3 @@
 import { createActionType } from 'shared/CreateActionTypes';
 
-export default createActionType(['SET_NEW_GAME_DATA']);
+export default createActionType(['SET_NEW_GAME_DATA', 'SET_LOCAL_PLAYER_DATA']);

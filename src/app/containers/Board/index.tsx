@@ -25,6 +25,10 @@ class Board extends Component {
         <CardChoosingPopUp />
         <YourTurnPopUp />
         <div className={'card-display'}>
+          {this.props.localPlayerData
+            ? this.props.localPlayerData.map(item => <Card id={item.id} />)
+            : null}
+
           <Card
             id={0}
             onClick={() => SocketConnection.emit('PLAY_CARD', { id: 0 })}
@@ -39,5 +43,6 @@ class Board extends Component {
 }
 
 export default connect(state => ({
-  gameData: state.AppReducer.gameData
+  gameData: state.AppReducer.gameData,
+  localPlayerData: state.AppReducer.localPlayerData
 }))(Board);

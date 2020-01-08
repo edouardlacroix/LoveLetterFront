@@ -5,6 +5,7 @@ import PlayedCardDisplay from 'components/PlayedCardDisplay';
 import Deck from 'components/Deck';
 import PlayerChoosingPopUp from 'components/PlayerChoosingPopUp';
 import CardChoosingPopUp from 'components/CardChoosingPopUp';
+import YourTurnPopUp from 'components/YourTurnPopUp';
 import SocketConnection from 'shared/SocketConnection';
 import history from 'history';
 import { connect } from 'react-redux';
@@ -22,6 +23,7 @@ class Board extends Component {
         <PlayerList />
         <PlayerChoosingPopUp />
         <CardChoosingPopUp />
+        <YourTurnPopUp />
         <div className={'card-display'}>
           <Card
             id={0}

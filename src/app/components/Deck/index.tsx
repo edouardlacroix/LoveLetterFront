@@ -3,7 +3,12 @@ import Card from 'components/Card';
 
 import './style.scss';
 
-class Deck extends Component {
+interface IProps {
+  cardsLeft: Number;
+  onClick: Function;
+}
+
+class Deck extends Component<IProps> {
   constructor(props) {
     super(props);
   }
@@ -13,7 +18,7 @@ class Deck extends Component {
       <div className={'deck-wrapper'} onClick={() => this.props.onClick()}>
         <div className={'card-image'}>
           <Card />
-          <p>27</p>
+          <p>{this.props.cardsLeft}</p>
         </div>
       </div>
     );

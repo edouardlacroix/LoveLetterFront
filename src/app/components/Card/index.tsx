@@ -46,6 +46,13 @@ class Card extends Component<IProps> {
         return <img src={princess} />;
       default:
         return <img src={cardBack} />;
+      // return (
+      //   <img
+      //     src={
+      //       'https://i.pinimg.com/originals/c1/59/b4/c159b4738dae9c9d8d6417228024de8d.jpg'
+      //     }
+      //   />
+      // );
     }
   }
 

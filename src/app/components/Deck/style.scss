@@ -6,36 +6,33 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin:0px;
-  top:1%;
-  right:21%;
+  margin: 0px;
+  top: 1%;
+  right: 21%;
 }
 
-.deck-wrapper .card-wrapper{
-width: 150px;
+.deck-wrapper .card-wrapper {
+  width: 150px;
 }
 
 .deck-wrapper .card-wrapper img:hover {
   border-radius: 10px;
-  filter:drop-shadow(10px 10px 10px black);
+  filter: drop-shadow(10px 10px 10px black);
   transition: 0.2s;
   height: 100%;
-  width:100%;
-  transform: none ;
-
+  width: 100%;
+  transform: none;
+  z-index: 0;
 }
 
-
-.deck-wrapper  p{
+.deck-wrapper p {
   position: absolute;
-  top:0px;
-  right:0px;
+  top: 0px;
+  right: 0px;
   width: 90%;
   text-align: center;
-  color:white;
+  color: white;
   font-size: 60px;
-  text-shadow: 4px 4px 3px black; 
+  text-shadow: 4px 4px 3px black;
   cursor: pointer;
 }
-
-

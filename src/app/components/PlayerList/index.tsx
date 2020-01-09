@@ -41,5 +41,5 @@ class PlayerList extends Component {
 }
 
 export default connect(state => ({
-  gameData: state.AppReducer.gameData
+  gameData: state.AppReducer.gameData[0]
 }))(PlayerList);

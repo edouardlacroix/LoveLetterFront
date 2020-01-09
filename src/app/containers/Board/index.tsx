@@ -19,7 +19,7 @@ class Board extends Component {
   render() {
     return (
       <div className={'board-wrapper'}>
-        <Deck />
+        <Deck onClick={() => null} cardsLeft={this.props.deck.cardsLeft} />
         <PlayerList />
         <PlayerChoosingPopUp />
         <CardChoosingPopUp />
@@ -30,10 +30,13 @@ class Board extends Component {
             : null}
 
           <Card
+            id={1}
+            onClick={() => SocketConnection.emit('PLAY_CARD', { id: 1 })}
+          />
+          <Card
             id={7}
             onClick={() => SocketConnection.emit('PLAY_CARD', { id: 7 })}
           />
-          <Card id={1} />
         </div>
         <PlayedCardDisplay />
       </div>
@@ -42,6 +45,7 @@ class Board extends Component {
 }
 
 export default connect(state => ({
-  gameData: state.AppReducer.gameData,
+  gameData: state.AppReducer.gameData[0],
+  deck: state.AppReducer.gameData[1],
   localPlayerData: state.AppReducer.localPlayerData
 }))(Board);

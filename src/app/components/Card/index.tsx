@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
-import priestTEMP from 'app/assets/priestTEMP.png';
-import spyTEMP from 'app/assets/spyTEMP.png';
-import guardTEMP from 'app/assets/guardTEMP.jpg';
+import spy from 'app/assets/spy.jpg';
+import guard from 'app/assets/guard.jpg';
+import priest from 'app/assets/priest.png';
+import baron from 'app/assets/baron.jpg';
+import handmaid from 'app/assets/handmaid.jpg';
+import prince from 'app/assets/prince.jpg';
+import chancelor from 'app/assets/chancelor.jpg';
+import king from 'app/assets/king.jpg';
+import countess from 'app/assets/countess.jpg';
+import princess from 'app/assets/princess.jpg';
 
 import cardBack from 'app/assets/card_back.jpg';
 import './style.scss';
@@ -18,25 +25,25 @@ class Card extends Component<IProps> {
   frontImageSwitch() {
     switch (this.props.id) {
       case 0:
-        return <img src={spyTEMP} />;
+        return <img src={spy} />;
       case 1:
-        return <img src={guardTEMP} />;
+        return <img src={guard} />;
       case 2:
-        return <img src={priestTEMP} />;
+        return <img src={priest} />;
       case 3:
-        return <img src={priestTEMP} />;
+        return <img src={priest} />;
       case 4:
-        return <img src={priestTEMP} />;
+        return <img src={priest} />;
       case 5:
-        return <img src={priestTEMP} />;
+        return <img src={priest} />;
       case 6:
-        return <img src={priestTEMP} />;
+        return <img src={priest} />;
       case 7:
-        return <img src={priestTEMP} />;
+        return <img src={priest} />;
       case 8:
-        return <img src={priestTEMP} />;
+        return <img src={priest} />;
       case 9:
-        return <img src={priestTEMP} />;
+        return <img src={priest} />;
       default:
         return <img src={cardBack} />;
     }

@@ -31,19 +31,19 @@ class Card extends Component<IProps> {
       case 2:
         return <img src={priest} />;
       case 3:
-        return <img src={priest} />;
+        return <img src={baron} />;
       case 4:
-        return <img src={priest} />;
+        return <img src={handmaid} />;
       case 5:
-        return <img src={priest} />;
+        return <img src={prince} />;
       case 6:
-        return <img src={priest} />;
+        return <img src={chancelor} />;
       case 7:
-        return <img src={priest} />;
+        return <img src={king} />;
       case 8:
-        return <img src={priest} />;
+        return <img src={countess} />;
       case 9:
-        return <img src={priest} />;
+        return <img src={princess} />;
       default:
         return <img src={cardBack} />;
     }

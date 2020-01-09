@@ -30,11 +30,10 @@ class Board extends Component {
             : null}
 
           <Card
-            id={0}
-            onClick={() => SocketConnection.emit('PLAY_CARD', { id: 0 })}
+            id={7}
+            onClick={() => SocketConnection.emit('PLAY_CARD', { id: 7 })}
           />
           <Card id={1} />
-          <Card id={2} />
         </div>
         <PlayedCardDisplay />
       </div>

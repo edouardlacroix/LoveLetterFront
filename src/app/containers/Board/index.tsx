@@ -16,6 +16,9 @@ class Board extends Component {
     super(props);
   }
 
+  componentDidMount() {
+    console.log(this.props.gameData);
+  }
   render() {
     if (this.props.gameData) {
       return (

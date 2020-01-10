@@ -17,30 +17,34 @@ class Board extends Component {
   }
 
   render() {
-    return (
-      <div className={'board-wrapper'}>
-        <Deck onClick={() => null} cardsLeft={this.props.deck.cardsLeft} />
-        <PlayerList />
-        <PlayerChoosingPopUp />
-        <CardChoosingPopUp />
-        <YourTurnPopUp />
-        <div className={'card-display'}>
-          {this.props.localPlayerData
-            ? this.props.localPlayerData.map(item => <Card id={item.id} />)
-            : null}
+    if (this.props.gameData) {
+      return (
+        <div className={'board-wrapper'}>
+          <Deck onClick={() => null} cardsLeft={this.props.deck.cardsLeft} />
+          <PlayerList />
+          <PlayerChoosingPopUp />
+          <CardChoosingPopUp />
+          <YourTurnPopUp />
+          <div className={'card-display'}>
+            {this.props.localPlayerData
+              ? this.props.localPlayerData.map(item => <Card id={item.id} />)
+              : null}
 
-          <Card
-            id={1}
-            onClick={() => SocketConnection.emit('PLAY_CARD', { id: 1 })}
-          />
-          <Card
-            id={7}
-            onClick={() => SocketConnection.emit('PLAY_CARD', { id: 7 })}
-          />
+            <Card
+              id={1}
+              onClick={() => SocketConnection.emit('PLAY_CARD', { id: 1 })}
+            />
+            <Card
+              id={7}
+              onClick={() => SocketConnection.emit('PLAY_CARD', { id: 7 })}
+            />
+          </div>
+          <PlayedCardDisplay />
         </div>
-        <PlayedCardDisplay />
-      </div>
-    );
+      );
+    } else {
+      return null;
+    }
   }
 }
 

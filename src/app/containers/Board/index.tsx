@@ -49,7 +49,7 @@ class Board extends Component {
 }
 
 export default connect(state => ({
-  gameData: state.AppReducer.gameData[0],
-  deck: state.AppReducer.gameData[1],
+  gameData: state.AppReducer.gameData ? state.AppReducer.gameData[0] : null,
+  deck: state.AppReducer.gameData ? state.AppReducer.gameData[1] : null,
   localPlayerData: state.AppReducer.localPlayerData
 }))(Board);

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import spy from 'app/assets/spy.jpg';
 import guard from 'app/assets/guard.jpg';
 import priest from 'app/assets/priest.png';
@@ -13,17 +13,12 @@ import princess from 'app/assets/princess.jpg';
 import cardBack from 'app/assets/card_back.jpg';
 import './style.scss';
 
-interface IProps {
-  id: number;
-}
 
-class Card extends Component<IProps> {
-  constructor(props) {
-    super(props);
-  }
+const Card = (props) => {
 
-  frontImageSwitch() {
-    switch (this.props.id) {
+  // TODO - Move this in utils/shared/lib 
+  const frontImageSwitch = () => {
+    switch (props.id) {
       case 0:
         return <img src={spy} />;
       case 1:
@@ -46,23 +41,15 @@ class Card extends Component<IProps> {
         return <img src={princess} />;
       default:
         return <img src={cardBack} />;
-      // return (
-      //   <img
-      //     src={
-      //       'https://i.pinimg.com/originals/c1/59/b4/c159b4738dae9c9d8d6417228024de8d.jpg'
-      //     }
-      //   />
-      // );
     }
   }
 
-  render() {
-    return (
-      <div className={'card-wrapper'} onClick={() => this.props.onClick()}>
-        {this.frontImageSwitch()}
-      </div>
-    );
-  }
+  return (
+    <div className={'card-wrapper'} onClick={() => props.onClick()}>
+      {frontImageSwitch()}
+    </div>
+  );
+
 }
 
 export default Card;

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import PlayerList from 'components/PlayerList';
-import Card from 'components/Card';
-import PlayedCardDisplay from 'components/PlayedCardDisplay';
-import Deck from 'components/Deck';
-import PlayerChoosingPopUp from 'components/PlayerChoosingPopUp';
-import CardChoosingPopUp from 'components/CardChoosingPopUp';
-import YourTurnPopUp from 'components/YourTurnPopUp';
+import PlayerList from 'app/components/PlayerList';
+import Card from 'app/components/Card';
+import PlayedCardDisplay from 'app/components/PlayedCardDisplay';
+import Deck from 'app/components/Deck';
+import PlayerChoosingPopUp from 'app/components/PlayerChoosingPopUp';
+import CardChoosingPopUp from 'app/components/CardChoosingPopUp';
+import YourTurnPopUp from 'app/components/YourTurnPopUp';
 import SocketConnection from 'shared/SocketConnection';
 import history from 'history';
 import { connect } from 'react-redux';
